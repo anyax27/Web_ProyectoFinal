@@ -19,7 +19,7 @@ class Divisas(models.Model):
 
 class Categorias(models.Model):
     id = models.AutoField(primary_key=True)
-    nombre = models.IntegerField()  
+    nombre = models.CharField(max_length=255)
 
 class ProductosCategorizados(models.Model):
     producto = models.ForeignKey(Productos, on_delete=models.CASCADE)
